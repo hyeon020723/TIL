@@ -1,0 +1,264 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: linear-gradient(white, rgb(233, 233, 233));
+}
+h1 {
+  color: limegreen;
+  font-size: 50px;
+  font-weight: 1000;
+  text-align: center;
+  padding-top: 50px;
+}
+h3 {
+  font-size: 15px;
+}
+p {
+  font-size: 12px;
+}
+input {
+  padding-inline: 10px;
+  width: 400px;
+  height: 40px;
+  border: 1px solid limegreen;
+  color: rgba(211, 211, 211, 0.5);
+  font-weight: bold;
+}
+.search {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 20px;
+}
+.search_bar img {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+}
+
+.menu {
+  margin: 0 auto;
+  box-sizing: border-box;
+  text-align: center;
+  margin-bottom: 125px;
+}
+.square {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  margin: 15px;
+
+  position: relative;
+
+  object-fit: cover;
+}
+.square img {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.square p {
+  position: absolute;
+
+  top: 120%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  font-size: 5px;
+  text-align: center;
+}
+
+.today {
+  height: 60px;
+  width: 400px;
+  background-color: white;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  position: relative;
+
+  padding: 10px;
+  box-sizing: border-box;
+}
+.today div {
+  float: left;
+  align-items: center;
+}
+.today div img {
+  width: 50px;
+  height: 50px;
+}
+.weather {
+  height: 225px;
+  width: 400px;
+  background-color: white;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  /* position: relative; */
+
+  padding: 10px;
+  box-sizing: border-box;
+}
+.weather h3 {
+  float: left;
+}
+.weather .weather_text img {
+  height: 25px;
+  width: 25px;
+  float: right;
+}
+button {
+  border: none;
+  padding: 5px;
+  font-size: 10px;
+}
+.weather img {
+  /* overflow: hidden; */
+  /* position: absolute; */
+  width: 90%;
+  object-fit: cover;
+}
+.covid {
+  height: 60px;
+  width: 400px;
+  background-color: white;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  position: relative;
+
+  padding: 10px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+}
+.covid img {
+  float: left;
+  width: 20px;
+}
+.holiyday {
+  height: 40px;
+  width: 400px;
+  background-color: white;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  position: relative;
+
+  text-align: center;
+
+  padding: 10px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+}
+.holiyday img {
+  width: 40px;
+  float: left;
+}
+
+.app {
+  height: 50px;
+  width: 400px;
+  background-color: white;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  position: relative;
+
+  padding: 10px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+}
+.app p {
+  font-size: 8px;
+}
+.app button {
+  background-color: white;
+  border: 1px solid blue;
+  border-radius: 5%;
+  color: rgb(0, 21, 255);
+  margin-left: 30px;
+}
+.app img {
+  width: 40px;
+  float: left;
+}
+
+.webtoon {
+  height: 40px;
+  width: 400px;
+  background-color: white;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  position: relative;
+
+  padding: 10px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+}
+
+.hotissue {
+  height: 100px;
+  width: 400px;
+  background-color: white;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  position: relative;
+
+  padding: 10px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+}
+
+.notice {
+  height: 40px;
+  width: 400px;
+  background-color: white;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  position: relative;
+
+  padding: 10px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+}
+
+.enabled {
+  background-color: limegreen;
+  border: 1px solid black;
+}
+
+footer {
+  color: gray;
+  text-align: center;
+  font-weight: 1000;
+  padding: 50px;
+}
+a {
+  font-size: 10px;
+  color: gray;
+  text-decoration: none;
+}
