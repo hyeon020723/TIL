@@ -7,7 +7,7 @@
 body {
   background: linear-gradient(white, rgb(233, 233, 233));
 }
-h1 {
+#logo {
   color: limegreen;
   font-size: 50px;
   font-weight: 1000;
@@ -28,17 +28,26 @@ input {
   color: rgba(211, 211, 211, 0.5);
   font-weight: bold;
 }
+img {
+  padding: 5px;
+}
+
+/*검색창*/
 .search {
+  position: relative;
   display: flex;
   justify-content: center;
-  position: relative;
   padding: 20px;
 }
-.search_bar img {
+#mic {
   position: absolute;
-  width: 40px;
-  height: 40px;
+  top: 50%;
+  transform: translate(400%, -50%);
+  width: 35px;
+  height: 35px;
 }
+
+/*메뉴*/
 
 .menu {
   margin: 0 auto;
@@ -51,13 +60,10 @@ input {
   height: 40px;
   display: inline-block;
   margin: 15px;
-
   position: relative;
-
   object-fit: cover;
 }
 .square img {
-  overflow: hidden;
   position: absolute;
   top: 0;
   left: 0;
@@ -67,7 +73,6 @@ input {
 }
 .square p {
   position: absolute;
-
   top: 120%;
   left: 50%;
   width: 100%;
@@ -76,6 +81,7 @@ input {
   text-align: center;
 }
 
+/*오늘의 날씨*/
 .today {
   height: 60px;
   width: 400px;
@@ -83,19 +89,18 @@ input {
   border-radius: 5px;
   margin: 0 auto;
   margin-bottom: 10px;
-  position: relative;
-
   padding: 10px;
   box-sizing: border-box;
-}
-.today div {
-  float: left;
+  display: flex;
   align-items: center;
 }
-.today div img {
+.today img {
   width: 50px;
   height: 50px;
 }
+
+/*날씨*/
+
 .weather {
   height: 225px;
   width: 400px;
@@ -103,18 +108,16 @@ input {
   border-radius: 5px;
   margin: 0 auto;
   margin-bottom: 10px;
-  /* position: relative; */
-
   padding: 10px;
   box-sizing: border-box;
 }
-.weather h3 {
-  float: left;
+.weather_text {
+  display: inline-flex;
+  align-items: center;
 }
 .weather .weather_text img {
   height: 25px;
   width: 25px;
-  float: right;
 }
 button {
   border: none;
@@ -122,11 +125,12 @@ button {
   font-size: 10px;
 }
 .weather img {
-  /* overflow: hidden; */
-  /* position: absolute; */
   width: 90%;
   object-fit: cover;
 }
+
+/*코로나*/
+
 .covid {
   height: 60px;
   width: 400px;
@@ -134,7 +138,6 @@ button {
   border-radius: 5px;
   margin: 0 auto;
   margin-bottom: 10px;
-  position: relative;
 
   padding: 10px;
   box-sizing: border-box;
@@ -142,10 +145,19 @@ button {
   display: flex;
   align-items: center;
 }
+.covid_box1 {
+  flex: 1;
+}
+.covid_box2 {
+  flex: 1;
+}
 .covid img {
   float: left;
   width: 20px;
 }
+
+/**/
+
 .holiyday {
   height: 40px;
   width: 400px;
@@ -153,7 +165,6 @@ button {
   border-radius: 5px;
   margin: 0 auto;
   margin-bottom: 10px;
-  position: relative;
 
   text-align: center;
 
@@ -162,11 +173,14 @@ button {
 
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .holiyday img {
   width: 40px;
   float: left;
 }
+
+/*앱 사용*/
 
 .app {
   height: 50px;
@@ -175,13 +189,16 @@ button {
   border-radius: 5px;
   margin: 0 auto;
   margin-bottom: 10px;
-  position: relative;
 
   padding: 10px;
   box-sizing: border-box;
 
   display: flex;
   align-items: center;
+}
+.app img {
+  width: 40px;
+  float: left;
 }
 .app p {
   font-size: 8px;
@@ -193,10 +210,8 @@ button {
   color: rgb(0, 21, 255);
   margin-left: 30px;
 }
-.app img {
-  width: 40px;
-  float: left;
-}
+
+/*웹툰*/
 
 .webtoon {
   height: 40px;
@@ -205,30 +220,44 @@ button {
   border-radius: 5px;
   margin: 0 auto;
   margin-bottom: 10px;
-  position: relative;
-
   padding: 10px;
   box-sizing: border-box;
-
   display: flex;
   align-items: center;
 }
 
 .hotissue {
-  height: 100px;
+  height: 120px;
   width: 400px;
   background-color: white;
   border-radius: 5px;
   margin: 0 auto;
   margin-bottom: 10px;
-  position: relative;
-
   padding: 10px;
   box-sizing: border-box;
 
   display: flex;
-  align-items: center;
+  flex-direction: column;
 }
+.hotissue_menu {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+.hotissue_menu > div {
+  display: inline-flex;
+  align-items: center;
+  background-color: rgb(241, 246, 251);
+  height: 35px;
+  width: 185px;
+  margin: 2px;
+  border-radius: 5px;
+}
+.hotissue_menu img {
+  width: 25px;
+  height: 25px;
+}
+
+/*업데이트 사전안내*/
 
 .notice {
   height: 40px;
@@ -237,7 +266,6 @@ button {
   border-radius: 5px;
   margin: 0 auto;
   margin-bottom: 10px;
-  position: relative;
 
   padding: 10px;
   box-sizing: border-box;
@@ -246,11 +274,7 @@ button {
   align-items: center;
 }
 
-.enabled {
-  background-color: limegreen;
-  border: 1px solid black;
-}
-
+/*footer*/
 footer {
   color: gray;
   text-align: center;

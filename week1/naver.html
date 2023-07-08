@@ -8,17 +8,15 @@
   </head>
 
   <body>
-    <h1>NAVER</h1>
+    <h1 id="logo">NAVER</h1>
 
     <div class="search">
-      <section class="search_bar">
-        <input type="text" placeholder="검색어를 입력해주세요." />
-        <img src="img/mic.png" alt="" />
-      </section>
+      <input type="text" placeholder="검색어를 입력해주세요." />
+      <img id="mic" src="img/mic.png" alt="" />
     </div>
 
     <div class="menu">
-      <section class="row1">
+      <div class="row1">
         <div class="square">
           <img src="img/news.png" alt="" />
           <p>뉴스판</p>
@@ -35,9 +33,9 @@
           <img src="img/sports.png" alt="" />
           <p>스포츠판</p>
         </div>
-      </section>
+      </div>
 
-      <section class="row2">
+      <div class="row2">
         <div class="square">
           <img src="img/mail.png" alt="" />
           <p>메일</p>
@@ -54,12 +52,14 @@
           <img src="img/etc.png" alt="" />
           <p></p>
         </div>
-      </section>
+      </div>
     </div>
 
     <div class="today">
-      <div><img src="img/cloud.svg" alt="" /></div>
-      <div>
+      <div class="today_img">
+        <img src="img/cloud.svg" alt="" />
+      </div>
+      <div class="today_text">
         <h3>10° 맑음</h3>
         <p>어제보다 2° 높아요</p>
       </div>
@@ -78,13 +78,23 @@
         <button class="week_weather" type="button">주간 날씨</button>
         <button class="week_smog" type="button">주간 미세먼지</button>
       </div>
-      <img src="img/weather.png" alt="" />
+      <div>
+        <img src="img/weather.png" alt="" />
+      </div>
     </div>
 
     <div class="covid">
-      <img src="img/covid.png" alt="" />
-      <h3>코로나19</h3>
-      <p>국내외 확진 현황</p>
+      <div class="covid_box1">
+        <img src="img/covid.png" alt="" />
+        <h3>코로나19</h3>
+        <p>국내외 확진 현황</p>
+      </div>
+
+      <div class="covid_box2">
+        <img src="img/covid.png" alt="" />
+        <h3>코로나19 팩트체크</h3>
+        <p>백신 정보 팩트는?</p>
+      </div>
     </div>
 
     <div class="holiyday">
@@ -109,7 +119,25 @@
     </div>
 
     <div class="hotissue">
-      <h3>인기 주제 판을 확인해 보세요!</h3>
+      <div><h3>인기 주제 판을 확인해 보세요!</h3></div>
+      <div class="hotissue_menu">
+        <div class="movie_pan">
+          <img src="img/movie.webp" alt="" />
+          <p>영화판</p>
+        </div>
+        <div class="bboom_pan">
+          <img src="img/bboom.webp" alt="" />
+          <p>뿜판</p>
+        </div>
+        <div class="webtoon_pan">
+          <img src="img/webtoon.png" alt="" />
+          <p>웹툰판</p>
+        </div>
+        <div class="economy_pan">
+          <img src="img/bank.webp" alt="d" />
+          <p>경제M판</p>
+        </div>
+      </div>
     </div>
 
     <div class="notice">
