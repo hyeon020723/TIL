@@ -13,7 +13,8 @@
 
 #### Week 2
 
-- [JavaScript+Jquery]()
+- [JavaScript](/week2/JavaScript.md)
+- [Jquery](/week2/Jquery.md)
 - [DB SQL + DB Modelling]()
 
 #### Week 3
