@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>todolist</title>
+    <link rel="stylesheet" href="todolist_style.css" />
+  </head>
+
+  <body>
+    <header>To do List</header>
+
+    <div class="main">
+      <div class="input">
+        <input id="inputField" placeholder="할 일 추가하기" />
+
+        <button id="addbtn">+</button>
+      </div>
+      <!--input div end-->
+
+      <div class="listBox">
+        <div id="toDoList" class="toDoList">
+          <li>
+            <input type="checkbox" name="checkbox" />
+            <p>공부하기</p>
+            <button id="fix">수정</button>
+            <button id="Del">X</button>
+          </li>
+          <li>
+            <input type="checkbox" />
+            <p>운동하기</p>
+            <button id="fix">수정</button>
+            <button id="Del">X</button>
+          </li>
+          <li>
+            <input type="checkbox" />
+            <p>청소하기</p>
+            <button id="fix">수정</button>
+            <button id="Del">X</button>
+          </li>
+        </div>
+
+        <div class="btnBox">
+          <button type="button" id="AllSelect">전체 선택</button>
+          <button type="button" id="NoSelect">선택 해제</button>
+          <button type="button" id="DelSelect">선택 삭제</button>
+          <button type="button" id="DelAll">전체 삭제</button>
+        </div>
+      </div>
+    </div>
+    <!--main div end-->
+  </body>
+
+  <script type="text/javascript" src="todolistscript.js"></script>
+</html>

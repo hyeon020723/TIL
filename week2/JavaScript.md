@@ -10,6 +10,11 @@
 
 ---
 
+변수 선언
+var
+
+---
+
 #### button
 
 - name(중복 가능) or id(고유)
@@ -22,35 +27,32 @@
 
 ---
 
-##### EVENT 방법
+##### 함수 선언 호출
 
-1. html+js
-
-html
+1. 기본
 
 ```
-<div class='my-div' onclick='hello()'>
-```
-
-js
-
-```
-function hello() {
-    alert('안녕하세요');
-    }
-```
-
-2. js만
-
-```
-window.onload = function () {
-var el = document.getElementById("my-div");
-el.onclick = hello;
+function 함수명(매개 변수1, 2, ...){  /// 함수선언
+    실행문장;
 }
+함수명(인자1, 2, ...) /// 함수호출
+```
 
-function hello()  {
-    alert('안녕하세요');
-    }
+```
+function 함수명(매개 변수1, 2, ...){  /// 함수선언
+    실행문장;
+}
+<button type="button" onclick="함수명(매개변수)">버튼</button> /// 함수호출
+```
+
+2. 함수
+
+```
+var 변수명 = function(매개변수1, 2, ...){ // 함수선언
+실행문장;
+}
+변수명(인자1, 2, ...); // 함수호출
+
 ```
 
 ---
@@ -97,7 +99,7 @@ while (표현식);
 2. for
 
 ```
-for (초기식; 표현식; 증감식) {실행문;}
+for (초기식; 조건식; 증감식) {실행문;}
 ```
 
 ---
