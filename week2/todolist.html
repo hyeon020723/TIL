@@ -18,38 +18,39 @@
       </div>
       <!--input div end-->
 
+
       <div class="listBox">
+
+        <div class="btnBox">
+          <input
+            type="checkbox"
+            id="AllSelect"
+            onclick="selectAll(this)"
+          >
+            전체 선택
+          </input>
+
+          <button type="button" id="Delbtn">전체 삭제</button>
+        </div><!--btnBox div end-->
+
         <div id="toDoList" class="toDoList">
           <li>
-            <input type="checkbox" name="checkbox" />
+            <input type="checkbox" />
             <p>공부하기</p>
-            <button id="fix">수정</button>
-            <button id="Del">X</button>
+            <button class="fix">수정</button>
+            <button class="Del">X</button>
           </li>
           <li>
             <input type="checkbox" />
             <p>운동하기</p>
-            <button id="fix">수정</button>
-            <button id="Del">X</button>
+            <button class="fix">수정</button>
+            <button class="Del">X</button>
           </li>
-          <li>
-            <input type="checkbox" />
-            <p>청소하기</p>
-            <button id="fix">수정</button>
-            <button id="Del">X</button>
-          </li>
-        </div>
+        </div><!--toDoList div end-->
 
-        <div class="btnBox">
-          <button type="button" id="AllSelect">전체 선택</button>
-          <button type="button" id="NoSelect">선택 해제</button>
-          <button type="button" id="DelSelect">선택 삭제</button>
-          <button type="button" id="DelAll">전체 삭제</button>
-        </div>
-      </div>
-    </div>
-    <!--main div end-->
+      </div><!--listBox div end-->
+    </div><!--main div end-->
   </body>
-
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
   <script type="text/javascript" src="todolistscript.js"></script>
 </html>

@@ -1,91 +1,92 @@
-let inputField = document.getElementById("inputField"); // 할 일 입력창
-let addbtn = document.getElementById("addbtn"); // 버튼
-let toDoList = document.getElementById("toDoList"); // 할 일 리스트창
+const inputField = document.getElementById("inputField"); // 할 일 입력창
+const toDoList = document.getElementById("toDoList"); // 할 일 리스트창
+const addbtn = document.getElementById("addbtn"); // add 버튼
 
 // 할 일 추가
-addbtn.addEventListener("click", function () {
+addbtn.addEventListener("click", function addtodo() {
   if (!inputField.value) {
     alert("내용을 입력해 주세요!");
   } else {
-    var li = document.createElement("li"); //부모 li
+    const li = document.createElement("li"); //부모 li
 
-    var input = document.createElement("input"); // 체크 버튼
+    const input = document.createElement("input"); // 체크 버튼
     input.type = "checkbox";
 
-    var p = document.createElement("p"); // 할 일
-    p.innerText = inputField.value; // 할 일 추가
+    const p = document.createElement("p"); // 할 일
+    p.innerHTML = inputField.value; // 할 일 추가
 
-    var fixbutton = document.createElement("button"); // 수정 버튼
-    fixbutton.id = "fix";
-    fixbutton.value = "수정";
+    const fixbtn = document.createElement("button"); // 수정 버튼
+    fixbtn.className = "fix";
+    fixbtn.innerHTML = "수정";
 
-    var delbutton = document.createElement("button"); // x 버튼
-    delbutton.id = "Del";
-    delbutton.value = "X";
+    const delbtn = document.createElement("button"); // x 버튼
+    delbtn.className = "Del";
+    delbtn.innerHTML = "X";
 
-    li.append(input, p, fixbutton, delbutton);
+    li.append(input, p, fixbtn, delbtn);
     document.querySelector("#toDoList").append(li);
 
     inputField.value = ""; // 입력창 초기화
   }
 });
 
-// 수정 기능
-// input readonly 속성 사용
+// ---------------------------------------------
 
+// 전체 선택
+function selectAll() {
+  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+  checkboxes.forEach((input) => {
+    input.checked = AllSelect.checked;
+  });
+
+  // const btnElement = document.getElementById(".AllSelect");
+  // btnElement.value = "선택해제"; // value, innertext도 안됨..
+
+  // 요소 선택 해제 시 전체선택 체크 해제되게
+  // 요소 전체 선택 시 전체선택 체크 선택되게
+}
+
+// ---------------------------------------------
+// 전체 삭제
+
+const Delbtn = document.getElementById("Delbtn"); // del 버튼
+
+Delbtn.addEventListener("click", () => {
+  const all_list = document.querySelectorAll("li");
+
+  alert("전체 삭제합니다");
+
+  for (let i = 0; i < all_list.length; i++) {
+    all_list[i].remove();
+  }
+});
+
+// ---------------------------------------------
+// 개별 삭제
+
+const Del = document.querySelectorAll(".Del"); // del 버튼
+const Del_list = Del.length;
+
+for (var i = 0; i < Del_list; i++) {
+  Del[i].addEventListener("click", function deltodo() {
+    alert("이 목록만 삭제합니다");
+
+    console.log(Del.parentElement);
+
+    // const Del_par = event.parentElement; // 안됨
+    // Del.remove(); // 안됨
+    // Del_list.removeChild(Del[i].parentNode); // 안됨
+  });
+}
+
+// ---------------------------------------------
+// 수정
+
+$(document).on("click", ".fix", function () {
+  var returnValue = prompt("수정할 내용을 입력해주세요");
+});
+
+// ---------------------------------------------
 // 저장 기능
 // input readonly 속성 사용
-
-//
-const todoDoel = todoList.filter((todo) => todo.done === true);
-console.log(todoDone);
-//
-//
-//
-//
-// 선택 항목 삭제
-// function delSelect() {
-//   var listBox = document.getElementById("listBox");
-//   var checkbox = document.querySelectorAll("#listBox .checkbox"); // listBody 하위의 체크박스 모두 선택
-
-//   for (console.log('checkbox', checked)); {
-//     // i에 체크박스 인덱스 들어옴
-//     if (checkbox[i].checked) {
-//       listBox.removeChild(checkbox[i].parentNode); //체크박스 i번째의 부모(<td>)의 부모(<tr>) 제거
-//     }
-//   }
-// }
-
-// 전체선택
-// let AllSelect = document.getElementById("AllSelect");
-
-// AllSelect.addEventListener("click", function () {
-//   var chks = document.querySelectorAll('input[type="checkbox"]');
-
-//   chks.forEach((checkbox) => {
-//     chks.checked = AllSelect.checked;
-//   });
-// });
-
-// $("#AllSelect").click(function () {
-//   var checked = $("input[type=checkbox]");
-
-//   if ($("input:checkbox[type='AllSelect']").prop("checked", true)) {
-//   } else {
-//     $("input[type=checkbox]").prop("checked", false);
-//   }
-// });
-
-// // 전체 삭제
-// function delAllElement() {
-//   var btnBox = document.getElementById("btnBox"); // btnBox 접근
-//   var listChild = list.children; // btnBox 자식요소 정보가 들어옴
-//   for (
-//     var i = 0;
-//     i < listChild.length;
-//     i++ // 자식요소 개수만큼 반복하며 제거
-//   ) {
-//     list.removeChild(listChild[i]); // list의 자식요소 0번째, 1번째, 2번째 ... 제거
-//     i--;
-//   }
-// }
