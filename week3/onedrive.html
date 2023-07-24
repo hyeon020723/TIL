@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>onedrive</title>
+    <link rel="stylesheet" href="onedrive_style.css" />
+  </head>
+
+  <body>
+    <div class="Nav">
+      <div class="NavTitle">
+        <a id="OneDrive" href="https://onedrive.live.com/">OneDrive</a>
+      </div>
+      <!--div NavTitle end-->
+      <div class="NavSearch">
+        <img id="SearchBarImg" src="/week3/img/reading glasses.png" />
+        <input id="SearchBar" type="text" placeholder="모두 검색" />
+      </div>
+      <div class="NavIcons">
+        <div
+          class="box"
+          title="플랜 및 업그레이드에 대한 자세한 내용을 보려면 클릭하세요."
+        >
+          <img id="NavIconsDiamond" src="/week3/img/diamond.png" />
+        </div>
+        <div class="box" title="설정">
+          <img src="/week3/img/setting.png" />
+        </div>
+        <div class="box" title="도움말">
+          <img src="/week3/img/questiohnmark.png" />
+        </div>
+        <div class="box" title="계정 관리자">
+          <img src="/week3/img/person.png" />
+        </div>
+      </div>
+    </div>
+    <!--Nav end-->
+    <div class="Main">
+      <div class="MainMenuNav">
+        <div class="Name">임 가현</div>
+        <div class="MainMenuNavItemsGroup">
+          <div class="MainMenuNavItems">
+            <div>
+              <button type="button">
+                <img src="/week3/img/folder.png" /><span>내 파일</span>
+              </button>
+            </div>
+
+            <div>
+              <button type="button">
+                <img src="/week3/img/history.png" /><span>최근</span>
+              </button>
+            </div>
+
+            <div>
+              <button type="button">
+                <img src="/week3/img/gallery.png" /><span>사진</span>
+              </button>
+            </div>
+
+            <div>
+              <button type="button">
+                <img src="/week3/img/share.png" /><span>공유됨</span>
+              </button>
+            </div>
+
+            <div>
+              <button type="button">
+                <img src="/week3/img/trashcan.png" /><span>휴지통</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!--MainMenuNavItemsGroup end-->
+
+        <div class="Upgrade">
+          <p>스토리지</p>
+          <button type="button" class="BuyAddStorage">추가 저장소 구입</button>
+          <button type="button" class="StorageManage">저장소 관리</button>
+        </div>
+        <!--Upgrade end-->
+      </div>
+      <!--MainMenuNav end-->
+
+      <div class="MainRight">
+        <div class="MainMenuBar">
+          <div class="MainSet">
+            <button
+              type="button"
+              class="MainMenuNavNewButton"
+              title="이 위치에 새 폴더 또는 문서 만들기"
+            >
+              <img id="MainMenuNavNewButtonImg" src="/week3/img/plus.png" />
+              <span>새로 만들기</span>
+              <img
+                id="MainMenuNavUploadButtonImg2"
+                src="/week3/img/arrow_down.png"
+              />
+            </button>
+            <button
+              type="button"
+              class="MainMenuNavUploadButton"
+              title="컴퓨터의 파일을 이 위치에 업로드"
+            >
+              <img
+                id="MainMenuNavUploadButtonImg"
+                src="/week3/img/upload.png"
+              />
+              <span>업로드</span>
+              <img
+                id="MainMenuNavUploadButtonImg2"
+                src="/week3/img/arrow_down.png"
+              />
+            </button>
+          </div>
+          <div class="SubSet">
+            <button
+              type="button"
+              class="MainMenuNavSortButton"
+              title="모든 항목의 정렬 기준"
+            >
+              <img id="MainMenuNavSortButtonImg" src="/week3/img/sort.png" />
+              <span>정렬</span
+              ><img id="ArrowDown" src="/week3/img/arrow_down.png" />
+            </button>
+            <button
+              type="button"
+              class="MainMenuNavLayerButton"
+              title="보기 옵션 전환"
+            >
+              <img id="MainMenuNavLayerButtonImg" src="/week3/img/layer.png" />
+              <img id="ArrowDown" src="/week3/img/arrow_down.png" />
+            </button>
+            <button
+              type="button"
+              class="MainMenuNavInformationButton"
+              title="세부 정보 창 열기"
+            >
+              <img
+                id="MainMenuNavInformationButtonImg"
+                src="/week3/img/information.png"
+              />
+              <span>정보</span>
+            </button>
+          </div>
+        </div>
+        <!--MainMenu end-->
+        <div class="MainView">
+          <h3 id="MyFile">내 파일</h3>
+          <div class="Files">
+            <ul>
+              <li>
+                <input type="checkbox" />
+                <img id="MyFileImg" src="/week3/img/file.png" />
+                <button>
+                  <p>이름 ↑</p>
+                  <img
+                    id="MainMenuNavUploadButtonImg2"
+                    src="/week3/img/arrow_down.png"
+                  />
+                </button>
+                <button>
+                  <p>수정한 날짜</p>
+                  <img
+                    id="MainMenuNavUploadButtonImg2"
+                    src="/week3/img/arrow_down.png"
+                  />
+                </button>
+                <button>
+                  <p>파일 크기</p>
+                  <img
+                    id="MainMenuNavUploadButtonImg2"
+                    src="/week3/img/arrow_down.png"
+                  />
+                </button>
+              </li>
+            </ul>
+            <h6>파일을 업로드하려면 여기로 끌어오세요.</h6>
+          </div>
+        </div>
+      </div>
+      <!--MainRight end-->
+    </div>
+    <!--Main end-->
+  </body>
+
+  <script
+    src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
+    type="text/javascript"
+  ></script>
+  <script type="text/javascript" src="onedrive_script.js"></script>
+</html>
