@@ -1,7 +1,3 @@
-# TIL
-
----
-
 ### :triangular_flag_on_post: BOOTCAMP 2023 :triangular_flag_on_post:
 
 <Br/>

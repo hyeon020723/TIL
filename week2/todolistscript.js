@@ -63,7 +63,7 @@ Delbtn.addEventListener("click", () => {
 });
 
 // ---------------------------------------------
-// 개별 삭제
+// 개별 삭제 => XX
 
 const Del = document.querySelectorAll(".Del"); // del 버튼
 const Del_list = Del.length;
